@@ -33,7 +33,7 @@ namespace WebApplicationBagagens.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "HistoricoMovimentacao",
+                name: "HistoricoMovimentacoes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -47,17 +47,17 @@ namespace WebApplicationBagagens.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HistoricoMovimentacao", x => x.Id);
+                    table.PrimaryKey("PK_HistoricoMovimentacoes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_HistoricoMovimentacao_Bagagens_BagagemModelId",
+                        name: "FK_HistoricoMovimentacoes_Bagagens_BagagemModelId",
                         column: x => x.BagagemModelId,
                         principalTable: "Bagagens",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_HistoricoMovimentacao_BagagemModelId",
-                table: "HistoricoMovimentacao",
+                name: "IX_HistoricoMovimentacoes_BagagemModelId",
+                table: "HistoricoMovimentacoes",
                 column: "BagagemModelId");
         }
 
@@ -65,7 +65,7 @@ namespace WebApplicationBagagens.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "HistoricoMovimentacao");
+                name: "HistoricoMovimentacoes");
 
             migrationBuilder.DropTable(
                 name: "Bagagens");

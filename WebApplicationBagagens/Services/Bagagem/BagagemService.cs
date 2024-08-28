@@ -161,12 +161,13 @@ namespace WebApplicationBagagens.Services.Bagagem
                 }
 
                 _context.Bagagens.Remove(bagagem);
+                await _context.SaveChangesAsync();
 
                 resposta.Dados = bagagem;
                 resposta.Mensagem = "Bagagem deletada com sucesso!";
                 return resposta;
-
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 resposta.Mensagem = ex.Message;
                 resposta.Status = false;

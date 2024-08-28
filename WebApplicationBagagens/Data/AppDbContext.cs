@@ -12,5 +12,6 @@ namespace WebApplicationBagagens.Data
 
         public DbSet<BagagemModel> Bagagens { get; set; }
         public DbSet<HistoricoMovimentacaoModel> HistoricoMovimentacoes { get; set; }
+
     }
 }

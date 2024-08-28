@@ -12,7 +12,7 @@ using WebApplicationBagagens.Data;
 namespace WebApplicationBagagens.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240814225413_CriandoBancoDeDados")]
+    [Migration("20240828230743_CriandoBancoDeDados")]
     partial class CriandoBancoDeDados
     {
         /// <inheritdoc />
@@ -102,7 +102,7 @@ namespace WebApplicationBagagens.Migrations
 
                     b.HasIndex("BagagemModelId");
 
-                    b.ToTable("HistoricoMovimentacao");
+                    b.ToTable("HistoricoMovimentacoes");
                 });
 
             modelBuilder.Entity("WebApplicationBagagens.Models.HistoricoMovimentacaoModel", b =>
