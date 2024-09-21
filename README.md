@@ -6,9 +6,9 @@ Este projeto foi desenvolvido como parte da disciplina de **Sistemas Distribuíd
 A API é composta por dois principais recursos: **Bagagem** e **Histórico de Movimentação**. Abaixo estão os endpoints disponíveis para cada um desses recursos, juntamente com uma breve descrição de suas funcionalidades.
 
 ## Requisitos
-- .NET Core 6.0 ou superior
+- .NET 8.0
 - Swagger configurado para testes e visualização dos endpoints
-- Banco de dados configurado conforme as instruções internas do projeto
+- Banco de dados SQL Server
 
 ## Endpoints da API
 
